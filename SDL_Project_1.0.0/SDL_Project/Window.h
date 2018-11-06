@@ -1,8 +1,8 @@
 
 class Window {
 private:
-	struct SDL_Window* window;   
-	struct SDL_Surface* screenSurface;
+	struct SDL_Window* window;
+	struct SDL_Renderer * renderer;
 	int width, height;
 	
 public:
@@ -10,6 +10,8 @@ public:
 	~Window();
 	bool OnCreate();
 	void OnDestroy();
-	SDL_Window* GetSDL_Window();
+
+	inline SDL_Window* GetWindow() { return window; }
+	inline SDL_Renderer* GetRenderer() { return renderer; }
 };
 

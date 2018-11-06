@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActionManager.h" />
+    <ClInclude Include="AddHealth.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="GameManager.h" />
@@ -32,6 +33,7 @@
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MMath.h" />
     <ClInclude Include="MoveCommand.h" />
+    <ClInclude Include="Purchase.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Scene0.h" />
     <ClInclude Include="Timer.h" />
@@ -71,8 +73,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\GameDev\SDL2-devel-2.0.7-VC\SDL2-2.0.7\include;C:\GameDev\SDL2-devel-2.0.7-VC\SDL2_image-2.0.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <IncludePath>C:\GameDev\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\GameDev\SDL2_image-2.0.3\lib\x86;C:\GameDev\SDL2-2.0.8\lib\x86</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -83,7 +85,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\GameDev\SDL2-devel-2.0.7-VC\SDL2-2.0.7\lib\x86\SDL2.lib;C:\GameDev\SDL2-devel-2.0.7-VC\SDL2-2.0.7\lib\x86\SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\GameDev\SDL2-2.0.8\lib\x86\SDL2.lib;C:\GameDev\SDL2-2.0.8\lib\x86\SDL2main.lib;C:\GameDev\SDL2_image-2.0.3\lib\x86\SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>

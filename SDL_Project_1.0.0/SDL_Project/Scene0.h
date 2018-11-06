@@ -9,16 +9,16 @@ using namespace MATH;
 class Scene0 : public Scene {
 private:
 	SDL_Window *window;
-	Matrix4 projectionMatrix;
+	float elapsedTime;
+	SDL_Renderer * renderer = nullptr;
+	SDL_Rect * rect = nullptr;
 
-	SDL_Surface *jetSkiImage;
-	Vec3 jetSkiPos;
-	SDL_Rect jetSkiRect;
 public:
-	Scene0(SDL_Window* sdlWindow);
+	Scene0(SDL_Window* sdlWindow, SDL_Renderer * renderer_);
 	~Scene0();
 	bool OnCreate();
 	void OnDestroy();
+	void HandleEvents(SDL_Event event);
 	void Update(const float time);
 	void Render();
 };

@@ -15,9 +15,6 @@ int main(int argc, char* args[]) { /// Standard C-style entry point, you need to
 	// Visual Studio 2015 version introduced in c++ 14
 	auto manager = std::unique_ptr<GameManager>(new GameManager());
 
-	// If your using Visual studio 2017 and c++ 17 you can call a new macro to aid in the creation
-	//auto manager = std::make_unique(GameManager());
-
 	bool status = manager->OnCreate();
 
 	if (status == true) {

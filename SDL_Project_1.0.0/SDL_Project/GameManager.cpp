@@ -25,13 +25,15 @@ bool GameManager::OnCreate() {
 		return false;
 	}
 
+
+
 	timer = new Timer();
 	if (timer == nullptr) {
 		OnDestroy();
 		return false;
 	}
-
-	currentScene = new Scene0(ptr->GetSDL_Window());
+	
+	currentScene = new Scene0(ptr->GetWindow(), ptr->GetRenderer());
 	if (currentScene == nullptr) {
 		OnDestroy();
 		return false;
@@ -47,8 +49,18 @@ bool GameManager::OnCreate() {
 
 /// Here's the whole game
 void GameManager::Run() {
+	SDL_Event event;
 	timer->Start();
 	while (isRunning) {
+
+		if (SDL_PollEvent(&event) != 0) {
+			currentScene->HandleEvents(event);
+
+			//if user pressed the X to close window, leave game loop
+			if (event.type == SDL_QUIT) {
+				isRunning = false;
+			}
+		}
 		timer->UpdateFrameTicks();
 		currentScene->Update(timer->GetDeltaTime());
 		currentScene->Render();
@@ -56,6 +68,9 @@ void GameManager::Run() {
 		/// Keeep the event loop running at a proper rate
 		SDL_Delay(timer->GetSleepTime(60)); ///60 frames per sec
 	}
+
+	//properly closes SDL
+	SDL_Quit();
 }
 
 GameManager::~GameManager() {}

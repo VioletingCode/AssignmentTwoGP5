@@ -2,18 +2,28 @@
 #include "HFiles.h"
 #include "Vector.h"
 
-using namespace MATH;
 
 class Character
 {
 private:
 	int health;
 	float wallet;
-	Vec3 position;
+	Vec2 * position;
+
 public:
-	void MoveTo(float _x, float _y);
-	float getX();
-	float getY();
 	Character();
 	~Character();
+
+	void addBalance(float amount);
+	void removeBalance(float amount);
+
+	void addHealth(int amount);
+	void removeHealth(int amount);
+
+	void moveTo(Vec2 * pos);
+
+	inline Vec2 * getPosition() { return position; }
+	inline int getHealth() { return health; }
+	inline float walletBalance() { return wallet; }
 };
+
