@@ -1,8 +1,11 @@
 #include "Scene0.h"
-#include <SDL.h>
-Scene0::Scene0(SDL_Window* sdlWindow_){
+#include <iostream>
+
+
+Scene0::Scene0(SDL_Window* sdlWindow_, SDL_Renderer * renderer_){
 	window = sdlWindow_;
-	jetSkiImage = nullptr;
+	renderer = renderer_;
+	elapsedTime = 0.0f;
 }
 
 Scene0::~Scene0(){
@@ -11,33 +14,59 @@ Scene0::~Scene0(){
 bool Scene0::OnCreate() {
 	int w, h;
 	SDL_GetWindowSize(window,&w,&h);
-	projectionMatrix = MMath::viewportNDC(w,h) * MMath::orthographic(0.0f, 14.0f, 0.0f, 7.0f, 0.0f, 1.0f) ;
-	jetSkiImage = SDL_LoadBMP("jetski.bmp");
-	if (jetSkiImage == nullptr) {
+
+	rect = new SDL_Rect;
+	rect->w = 100;
+	rect->h = 100;
+	rect->x = (w / 2) - 50;
+	rect->y = (h / 2) - 50;
+
+	if (rect == nullptr) {
+		OnDestroy();
 		return false;
 	}
-	jetSkiPos.Load(0.0f, 1.5f, 0.0f);
+
 	return true;
 }
 
-void Scene0::OnDestroy() {}
+void Scene0::OnDestroy() {
+	if (window) delete window;
+	if (renderer) delete renderer;
+	if (rect) delete rect;
+}
+
+void Scene0::HandleEvents(SDL_Event event) {
+
+	//example event types
+	if (event.type == SDL_KEYDOWN) {
+		if (event.key.keysym.sym == SDLK_KP_ENTER) {
+			std::cout << "User pressed Enter" << std::endl;
+		}
+	}
+
+	if (event.type == SDL_MOUSEBUTTONDOWN) {
+		std::cout << "User clicked mouse button" << std::endl;
+	}
+}
 
 void Scene0::Update(const float time) {
-	/// This is the physics in the x dimension only
-	jetSkiPos.x += 2.25f * time; /// I just made up a velocity 
+	//keeps track of how much time has passed
+	//this isn't being used yet, but it's there just in case
+	elapsedTime += time;
+
 }
 
 void Scene0::Render() {
+	//set background to white
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	//fill background
+	SDL_RenderClear(renderer);
 
-	Vec3 screenCoords = projectionMatrix * jetSkiPos;
+	//set colour, then draw rect with that colour
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+	SDL_RenderFillRect(renderer, rect);
 
-	jetSkiRect.h = jetSkiImage->h;
-	jetSkiRect.w = jetSkiImage->w;
-	jetSkiRect.x = screenCoords.x; /// implicit type conversions BAD - probably causes a compiler warning
-	jetSkiRect.y = screenCoords.y; /// implicit type conversions BAD - probably causes a compiler warning
 
-	SDL_Surface *screenSurface = SDL_GetWindowSurface(window);
-	SDL_FillRect(screenSurface, nullptr, SDL_MapRGB(screenSurface->format, 0xff, 0xff, 0xff));
-	SDL_BlitSurface(jetSkiImage, nullptr, screenSurface, &jetSkiRect);
-	SDL_UpdateWindowSurface(window);
+	//present all above changes
+	SDL_RenderPresent(renderer);
 }

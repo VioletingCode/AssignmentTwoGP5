@@ -4,7 +4,6 @@
 
 
 Window::Window(int width_, int height_){
-	screenSurface = nullptr;
 	window = nullptr;
 	width = width_;
 	height = height_;
@@ -22,21 +21,19 @@ bool Window::OnCreate(){
 		return false;
 	}
 
-	screenSurface = SDL_GetWindowSurface(window);
-	if (screenSurface == nullptr) {
-		std::cout << "SDL_Error: " << SDL_GetError() << std::endl;
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+	if (renderer == nullptr) {
+		std::cerr << "Failed to create renderer.\n";
 		return false;
 	}
+
 	return true;
 }
 
 void Window::OnDestroy(){
-	/// Kill the surface first
-	if (screenSurface) {
-		SDL_FreeSurface(screenSurface);
-	}
 
-	/// Now kill the window
+	///kill the window
 	if (window){
 		SDL_DestroyWindow(window);
 	}
@@ -47,7 +44,3 @@ void Window::OnDestroy(){
 }
 
 Window::~Window(){}
-
-SDL_Window* Window::GetSDL_Window() {
-	return window;
-}

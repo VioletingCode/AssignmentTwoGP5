@@ -1,1 +1,85 @@
-﻿  SDL_Project.vcxproj -> C:\Users\Violet\Desktop\Classes\GameProgamming5-c++2\SDLFramework\SDL_Project_1.0.0\Debug\SDL_Project.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (SDL_Project.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  UndoManager.cpp
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): warning C4473: 'printf' : not enough arguments passed for format string
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: placeholders and their parameters expect 3 variadic arguments, but 2 were provided
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: the missing variadic argument 3 is required by format string '%f'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2238: unexpected token(s) preceding ';'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(23): error C2061: syntax error: identifier 'Vec2'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C7524: 'inline' specifier cannot appear on a block-scope declaration or non-static data member
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+  Scene0.cpp
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): warning C4473: 'printf' : not enough arguments passed for format string
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: placeholders and their parameters expect 3 variadic arguments, but 2 were provided
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: the missing variadic argument 3 is required by format string '%f'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\scene.h(9): error C2061: syntax error: identifier 'SDL_Event'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\scene0.cpp(33): warning C4150: deletion of pointer to incomplete type 'SDL_Window'; no destructor called
+  c:\gamedev\sdl2-2.0.8\include\sdl_video.h(90): note: see declaration of 'SDL_Window'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\scene0.cpp(34): warning C4150: deletion of pointer to incomplete type 'SDL_Renderer'; no destructor called
+  c:\gamedev\sdl2-2.0.8\include\sdl_render.h(122): note: see declaration of 'SDL_Renderer'
+  MoveCommand.cpp
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): warning C4473: 'printf' : not enough arguments passed for format string
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: placeholders and their parameters expect 3 variadic arguments, but 2 were provided
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: the missing variadic argument 3 is required by format string '%f'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2238: unexpected token(s) preceding ';'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(23): error C2061: syntax error: identifier 'Vec2'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C7524: 'inline' specifier cannot appear on a block-scope declaration or non-static data member
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\movecommand.cpp(4): error C2660: 'Character::moveTo': function does not take 1 arguments
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\movecommand.cpp(8): error C2660: 'Character::moveTo': function does not take 1 arguments
+  Character.cpp
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\hfiles.h(8): error C2871: 'MATH': a namespace with this name does not exist
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): warning C4473: 'printf' : not enough arguments passed for format string
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: placeholders and their parameters expect 3 variadic arguments, but 2 were provided
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: the missing variadic argument 3 is required by format string '%f'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2238: unexpected token(s) preceding ';'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(23): error C2061: syntax error: identifier 'Vec2'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C7524: 'inline' specifier cannot appear on a block-scope declaration or non-static data member
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.cpp(8): error C2065: 'position': undeclared identifier
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.cpp(34): error C2511: 'void Character::moveTo(MATH::Vec2 *)': overloaded member function not found in 'Character'
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(7): note: see declaration of 'Character'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.cpp(35): error C2065: 'position': undeclared identifier
+  ActionManager.cpp
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): warning C4473: 'printf' : not enough arguments passed for format string
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: placeholders and their parameters expect 3 variadic arguments, but 2 were provided
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\vector.h(147): note: the missing variadic argument 3 is required by format string '%f'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(11): error C2238: unexpected token(s) preceding ';'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(23): error C2061: syntax error: identifier 'Vec2'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2143: syntax error: missing ';' before '*'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C7524: 'inline' specifier cannot appear on a block-scope declaration or non-static data member
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(25): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(10): error C2039: 'getPosition': is not a member of 'Character'
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(7): note: see declaration of 'Character'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(10): error C2227: left of '->x' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(10): error C2227: left of '->y' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(15): error C2039: 'getPosition': is not a member of 'Character'
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(7): note: see declaration of 'Character'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(15): error C2227: left of '->x' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(15): error C2227: left of '->y' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(20): error C2039: 'getPosition': is not a member of 'Character'
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(7): note: see declaration of 'Character'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(20): error C2227: left of '->x' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(20): error C2227: left of '->y' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(25): error C2039: 'getPosition': is not a member of 'Character'
+  c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\character.h(7): note: see declaration of 'Character'
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(25): error C2227: left of '->x' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(25): error C2227: left of '->y' must point to class/struct/union/generic type
+c:\users\froli\documents\github\assignmenttwogp5\sdl_project_1.0.0\sdl_project\actionmanager.cpp(29): error C3867: 'UndoManager::hasActions': non-standard syntax; use '&' to create a pointer to member
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Timer.cpp

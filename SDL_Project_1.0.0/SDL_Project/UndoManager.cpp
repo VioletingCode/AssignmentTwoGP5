@@ -1,6 +1,13 @@
 #include "UndoManager.h"
 
-void UndoManager::AddCommand(unique_ptr<Command> _action) {
+UndoManager::UndoManager() {
+}
+
+
+UndoManager::~UndoManager() {
+}
+
+void UndoManager::AddCommand(Command * _action) {
 	actionList.push(_action);
 }
 
@@ -10,14 +17,9 @@ void UndoManager::UndoCommand() {
 }
 
 bool UndoManager::hasActions() {
-	if (actionList.size() < 0)
+	if (actionList.size() > 0)
 		return true;
-	return false;
-}
-
-UndoManager::UndoManager() {
+	else return false;
 }
 
 
-UndoManager::~UndoManager() {
-}

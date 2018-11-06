@@ -5,4 +5,5 @@
 #include "Character.h"
 #include "Command.h"
 using namespace std;
+using namespace MATH;
 //Collects header files in one place

@@ -1,13 +1,11 @@
 #include "MoveCommand.h"
 
 void MoveCommand::Action(){
-	previousX = unit->getX;
-	previousY = unit->getY;
-	unit->MoveTo(newX, newY);
+	unit->moveTo(newPosition);
 }
 
 void MoveCommand::Undo() {
-	unit->MoveTo(previousX, previousY);
+	unit->moveTo(prevPosition);
 }
 
 MoveCommand::~MoveCommand()
